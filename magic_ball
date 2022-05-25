@@ -1,0 +1,14 @@
+answers = ['Definitely','For sure', 'No doubts', 'Definitely yes', 'You can be 100% sure','I think yes', 'Probably', 'Good chances', 'Signs tell yes','Yes','It's not clear yet, come back later','Ask later', 'Better not to say', 'Can't tell now', 'Think it through and ask again','You wish', 'My answer is no', 'So far no', 'I am pessimistic about it', 'Doubtful']
+print('Hello, I am magical ball and I can't answer to any of your qestion.')
+print('What is your name?')
+name = input()
+print("Hello,", name)
+
+again = 'y'
+
+while again.lower() == 'y':
+    question = input("Ask here your question: ")
+    print(random.choice(answers))
+    again = input('Задать еще один вопрос? (y = yes, n = no): ')
+    if not again.lower() == 'y':
+          print('Come back when you have another question!')
