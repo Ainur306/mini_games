@@ -1,0 +1,17 @@
+alpha = 'абвгдежзийклмнопрстуфхцчшщъыьэюяабвгдежзийклмнопрстуфхцчшщъыьэюя'
+beta = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
+step = int(input('Шаг шифровки: '))
+message = input("Сообщение для шифровки: ")
+result = ""
+for i in message:
+    if i in beta:
+        before = beta.find(i)
+        after = before + step        
+        result += beta[after] 
+    elif i in alpha:
+        before = alpha.find(i)
+        after = before + step        
+        result += alpha[after]
+    else:
+        result += i
+print(result)
